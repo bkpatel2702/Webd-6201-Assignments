@@ -1,6 +1,6 @@
 // Full name: Bhargav Patel
 // Student ID:100841562
-// Date completed: 04-02-2023
+// Date completed: 05-02-2023
 
 // Setting the time function that will help page to stay on the same for 3 second 
 function timeRedirect(e){
