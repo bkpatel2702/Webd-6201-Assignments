@@ -1,0 +1,75 @@
+<!-- Full name: Bhargav Patel
+Student ID:100841562
+Date completed: 05-02-2023 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the page -->
+    <title>Contact Us</title>
+    <!-- Getting the bootstrap -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
+  </head>
+  <body>
+    <!-- Setting navbar to light color and then setting the navbar so user can transfer to the other pages using that -->
+  <nav class="navbar bg-light">  
+    <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="product.html">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="services.html">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="contact.html">Contact</a>
+        </li>
+    </ul>
+  </nav>    
+  <!-- Setting the form that will take user's basic details -->
+    <form>
+      <!-- getting user's name -->
+        <div class="form-group col-md-6">
+          <label for="inputName1">Name</label>
+          <!-- Setting placeholder to give the idea about what information should user enter -->
+          <input type="text" class="form-control" id="inputName1" placeholder="Enter your full name" required>
+        </div>
+        
+        <!-- Getting user's phone number -->
+        <div class="form-group col-md-6">
+          <label for="inputPhone">Phone</label>
+          <!-- Setting pattern to check for the phone number and giving placeholder to provide an example -->
+          <input type="tel" class="form-control" id="inputPhone" placeholder="999-888-7777" aria-describedby="phoneHelp" 
+          pattern="\d{3}[\-]\d{3}[\-]\d{4}" required />
+          <small id="phoneHelp" class="form-text text-muted">We'll never share your phone number with anyone else.</small>
+          <p id="phoneError"></p>
+        </div>
+
+        <!-- Getting user's email address -->
+        <div class="form-group col-md-6">
+          <label for="exampleInputEmail1">Email address</label>
+          <!-- setting placeholder to provide what type of email should user enter -->
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="abc@gmail.com">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        
+        <!-- Getting short message from user -->
+        <div class="form-group col-md-6">
+          <label for="shortMessage">Short Message</label>
+          <input type="text" class="form-control" id="shortMessage" placeholder="Please enter any kind of short message">
+          </div>
+          <!-- submit button -->
+        <button id="submit-btn" type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <!-- Javascript file -->
+    <script src="./scripts/app.js"></script>
+  </body>
+</html>
