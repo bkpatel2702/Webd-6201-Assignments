@@ -85,7 +85,7 @@ $(function () {
             // otherwise assume it has the toggleShow class
             else{
                 //remove toggleShow and add toggleHide
-                $(this).removeClass("toggleShow").addClass("toogleHide");
+                $(this).removeClass("toggleShow").addClass("toggleHide");
             }
         });
     });
