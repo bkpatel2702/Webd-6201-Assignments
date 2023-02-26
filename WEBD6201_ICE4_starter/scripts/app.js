@@ -93,7 +93,7 @@ $(function () {
 
     // function to add the image next to the text
 if($("#speckled-excerpt")){
-    let aspImg = "<img class='asp-img' src='../images/asp.jpeg'>";
+    let aspImg = "<img class='asp-img' src='./images/asp.jpeg'>";
     $(aspImg).insertBefore($("#speckled-excerpt"));
 }
 
