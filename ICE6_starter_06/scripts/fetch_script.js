@@ -10,21 +10,24 @@ let url_fetch = 'https://icanhazdadjoke.com/';
 let myFetchHeaders = {"Accept": "application/json"};
 
 // create the callback for the click
-$(btnFetch).click(()=> {
+$(btnFetch).click(() => {
     
     // use fetch
-    fetch(url_fetch, {
+    fetch(url_fetch, 
+    {   
         // give the necessary header data
         headers: myFetchHeaders
     })
     // first then() to recieve the promise
-    .then((res) => {
+    .then((res) => 
+    {
       // send the json from the promise on to the next then()  
         return res.json();
-
-    }).then((jsonRes) => {
+    })
+    .then((jsonRes) => 
+    {
         // console log the json
-        // console.log(jsonRes['joke']);
+        console.log(jsonRes['joke']);
         // set the output
         $('#output').text(jsonRes['joke']);
     })

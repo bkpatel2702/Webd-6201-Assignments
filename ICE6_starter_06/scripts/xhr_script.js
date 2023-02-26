@@ -4,15 +4,15 @@ console.log("xhr_script.js loaded");
 let btnxhr = $('#xhrJoke');
 
 // create a url variable
-let url_xhr = 'https://icanhazdadjoke.com/'
+let url_xhr = 'https://icanhazdadjoke.com/';
 
 // create a click callback that handles the API call
-$(btnxhr).click(()=>{   
+$(btnxhr).click(()  =>  {   
     
     // instantiate an XMLHttpRequest object
     let xhr = new XMLHttpRequest();
 
-    // confiture with open()
+    // configure with open()
     xhr.open("GET",url_xhr);
 
     // set the necessary headers for icanhazdadjoke.com
@@ -36,12 +36,7 @@ $(btnxhr).click(()=>{
                 // set the output
                 $('#output').text(JSObjJoke['joke']);
         }
-            }
-        
+    }  
     // send the request
     xhr.send();        
-
-
 })    
-
-    
