@@ -1,9 +1,11 @@
 /* Setting image to the backgroud */
-body {
-    background-image: url(../images/flowers-g1e4b9be3f_1920.jpg);
+img{
+    height:90%;
+    width: 90%; 
     background-repeat: no-repeat;
     background-position:top;
     background-size:100% ;
+    
 }
 
 /* Setting font type to the h2 element */
@@ -11,4 +13,9 @@ h2 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
     color:rgb(168, 28, 28);
+}
+
+div.series img{
+    height: 350px;
+    width: 250px;
 }
