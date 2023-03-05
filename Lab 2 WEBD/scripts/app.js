@@ -94,7 +94,7 @@ function validateLastName(lastName) {
  * @returns html element if there are any errors
  */
 function validateEmail(email) {
-    if(emailid.test(email).val() && email.length > 8){
+    if(emailid.test(email).val() || email.length > 8){
         return "<p></p>"
     }
     else{
@@ -110,7 +110,7 @@ function validateEmail(email) {
  */
 function validatePassword(password1,password2) {
 
-    if(password1 == password2 && password1.length > 6){
+    if(password1 == password2 || password1.length > 6){
         return "<p></p>"
     }
     else{
@@ -138,6 +138,6 @@ if ($("#regBtnSubmit")){
     $("#lastname-group").children(".ErrorMessage").html(validateLastName(new_user.userLastName));
     // $("#email-group").children(".ErrorMessage").html(validateEmail(new_user.userEmailAddress));
     $("#password-group").children(".ErrorMessage").html(validatePassword(new_user.userPassword));
-
+    $("#conformpass-group").children(".ErrorMessage").html(validatePassword(new_user.userPassword));
     });
 };
