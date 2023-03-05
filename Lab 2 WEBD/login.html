@@ -9,12 +9,12 @@ Date completed: 05-02-2023 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Title of the page -->
-    <title>Home</title>
+    <title>Login</title>
 
     <!-- linking css file and bootstrap -->
-    <link rel="stylesheet" href="./style/style.css"/>
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" href="./style/style.css" />
   </head>
   <body>
     <!-- Creating navbar that can help to go through different pages and set color to the light so it can be visible properly -->
@@ -35,10 +35,30 @@ Date completed: 05-02-2023 -->
             <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact</a>
             </li>
-            <li class="nav-link">
+            <li class="nav-item">
             <a class="nav-link disabled" href="login.html">Login Page</a>
             </li>
         </ul>
     </nav>
+
+    <form id="login-form">
+      <h1>Login</h1>
+      <div class="form-group col-md-3" id="username-group">
+				<label for="inputusername">User Name</label>
+				<input type="text" class="form-control" id="inputUserName" placeholder="username" required />
+				<div class="errorMessage"></div>
+			</div>
+
+      <div class="form-group col-md-3" id="loginPassword-group">
+				<label for="inputLoginPassword">Password</label>
+				<input type="password" class="form-control" id="inputLoginPassword" placeholder="password" required />
+				<div class="errorMessage"></div>
+			</div>
+      
+      <button type="submit" class="btn btn-primary">
+        Login
+      </button>
+    </form>
+    <p>Don't have an accont?<a href="register.html">Register Here!</a> </p>
   </body>
 </html>
