@@ -40,6 +40,7 @@ class User{
      * @param {string} userEmailAddress
      * @param {string} userPassword
      */
+    // Constructing the class attributes 
     constructor(userFirstName,userLastName,userEmailAddress,userPassword){
         this.userFirstName = userFirstName;
         this.userLastName = userLastName;
@@ -51,6 +52,8 @@ class User{
      * @property {function} displayUser it prints the information of the users such as first name, last name, email, password
      * @returns {string}
      */
+
+    // Display the user details
     displayUser() {
         return `Name: ${this.userFirstName}${this.userLastName},
                 emailAddress: ${this.userEmailAddress},
@@ -65,7 +68,11 @@ class User{
  * @param {string} firstName 
  * @returns html element if there are any errors
  */
+
+// validating the user's firstname with the given validation details
 function validateFirstName(firstName) {
+
+    // if the user enters first name with less than 2 characters than show the error message else show nothing and save the details
     if(firstName.length < 2) {
         return "<p>Please enter at least 2 letters to save first name</p>"
     }
@@ -79,7 +86,10 @@ function validateFirstName(firstName) {
  * @param {string} lastName 
  * @returns html element if there are any errors
  */
+
+// validating user's last name
 function validateLastName(lastName) {
+    // if user enters the name less than 2 characters than show the error message, else show nothing and save the details
     if(lastName.length < 2) {
         return "<p>Please enter at least 2 letters to save last name</p>"
     }
@@ -93,7 +103,10 @@ function validateLastName(lastName) {
  * @param {string} email 
  * @returns html element if there are any errors
  */
+
+// validate email address
 function validateEmail(email) {
+    // if the email address is less than 8 characters or not following the format then show error message else save the details
     if(emailid.test(email).val() || email.length > 8){
         return "<p></p>"
     }
@@ -108,8 +121,10 @@ function validateEmail(email) {
  * @param {string} password2 
  * @returns html element if there are any errors
  */
-function validatePassword(password1,password2) {
 
+// validate password details
+function validatePassword(password1,password2) {
+    // if the password 1 and password 2 matches and the length is greater than 6 then save the details otherwise show error message
     if(password1 == password2 || password1.length > 6){
         return "<p></p>"
     }
@@ -118,9 +133,12 @@ function validatePassword(password1,password2) {
     }
 }
 
+// getting submit button and setting properties
 if ($("#regBtnSubmit")){
+    // preventing to do login if there are no information 
     $("#regBtnSubmit").click(function (e) {
         e.preventDefault();
+        // creating variable that will get the user class attributes to save the data
         const new_user = new User(
             // getting user's first name
             $("#inputFirstName").val(),
@@ -131,9 +149,11 @@ if ($("#regBtnSubmit")){
             // getting user's password
             $("#inputPassword").val()
         )
-
+        
+        // printing the user details to the console
         console.log(`User details: ${new_user.displayUser()}`)
     
+    // showing the error messages into the fields that created for the register form
     $("#firstname-group").children(".ErrorMessage").html(validateFirstName(new_user.userFirstName));
     $("#lastname-group").children(".ErrorMessage").html(validateLastName(new_user.userLastName));
     // $("#email-group").children(".ErrorMessage").html(validateEmail(new_user.userEmailAddress));

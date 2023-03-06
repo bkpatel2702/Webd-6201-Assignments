@@ -1,6 +1,6 @@
 <!-- Full name: Bhargav Patel
 Student ID:100841562
-Date completed: 05-02-2023 -->
+Date completed: 05-03-2023 -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,7 +10,7 @@ Date completed: 05-02-2023 -->
     <!-- Title of the page -->
     <title>Register Page</title>
 
-    <!-- linking css file and bootstrap -->
+    <!-- linking css file, bootstrap and jquery-->
     <script
 			src="https://code.jquery.com/jquery-3.6.3.min.js"
 			integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
@@ -45,45 +45,56 @@ Date completed: 05-02-2023 -->
             </li>
         </ul>
     </nav>
+
+    <!-- creating form that will ask user to input their details for the registration -->
     <form>
         <div class="form-Registration">
             <h1>Register</h1>
             <h2>Create your own accont. It's free and only takes a minute.</h2>
+          
+          <!-- Ask user to input their first name -->
           <div class="form-group col-md-5" id="firstname-group">
             <label for="inputFirstName">First Name</label>
             <input type="text" class="form-control" id="inputFirstName" placeholder="First name" required>
             <div class="ErrorMessage"></div>
           </div>
 
+          <!-- Ask user to input their last name  -->
           <div class="form-group col-md-5" id="lastname-group">
             <label for="inputLastName">Last Name</label>
             <input type="text" class="form-control" id="inputLastName" placeholder="Last name" required>
             <div class="ErrorMessage"></div>
           </div>
           
+          <!-- Ask user to input their email address  -->
           <div class="form-group col-md-5" id="email-group">
             <label for="inputEmailAddress">Email Address</label>
             <input type="email" class="form-control" id="inputEmailAddress" placeholder="Email Address" minlength="8" required>
             <div class="ErrorMessage"></div>
           </div>
           
+          <!-- Ask user to enter their password  -->
           <div class="form-group col-md-3" id="password-group">
             <label for="inputPassword">Password</label>
             <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
             <div class="ErrorMessage"></div>
           </div>
           
+          <!-- Conform the entered password  -->
           <div class="form-group col-md-3" id="conformpass-group">
             <label for="conformPassword">Conform Password</label>
             <input type="password" class="form-control" id="conformPassword" placeholder="Conform Password" required>
             <div class="ErrorMessage"></div>
           </div>
-
         </div>
+
+        <!-- Press Register button to submit the entered details  -->
         <button type="submit" class="btn btn-primary" id="regBtnSubmit">
             Register
         </button>
       </form>
+
+      <!-- If the user have accont credentials than give this link to login -->
       <p class="text-center">already have an account? <a href="login.html">Sign in</a></p>
     <script src="./scripts/app.js"></script>
   </body>

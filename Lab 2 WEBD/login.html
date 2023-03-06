@@ -1,6 +1,6 @@
 <!-- Full name: Bhargav Patel
 Student ID:100841562
-Date completed: 05-02-2023 -->
+Date completed: 05-03-2023 -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +11,7 @@ Date completed: 05-02-2023 -->
     <!-- Title of the page -->
     <title>Login</title>
 
-    <!-- linking css file and bootstrap -->
+    <!-- Adding CSS, bootstrap and jquery to use those things -->
     <script
 			src="https://code.jquery.com/jquery-3.6.3.min.js"
 			integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
@@ -21,6 +21,7 @@ Date completed: 05-02-2023 -->
     <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
     <link rel="stylesheet" href="./style/style.css" />
   </head>
+
   <body>
     <!-- Creating navbar that can help to go through different pages and set color to the light so it can be visible properly -->
     <nav class="navbar bg-light">  
@@ -46,7 +47,9 @@ Date completed: 05-02-2023 -->
         </ul>
     </nav>
 
+    <!-- Creating the login form that will ask user to input their username and the password -->
     <form id="login-form">
+      <!-- Ask user to input their user name -->
       <h1>Login</h1>
       <div class="form-group col-md-3" id="username-group">
 				<label for="inputusername">User Name</label>
@@ -54,17 +57,22 @@ Date completed: 05-02-2023 -->
 				<div class="errorMessage"></div>
 			</div>
 
+      <!-- Ask user to input their password -->
       <div class="form-group col-md-3" id="loginPassword-group">
 				<label for="inputLoginPassword">Password</label>
 				<input type="password" class="form-control" id="inputLoginPassword" placeholder="password" required />
 				<div class="errorMessage"></div>
 			</div>
       
+      <!-- press submit button to submit the details -->
       <button type="submit" class="btn btn-primary" id="logBtnSubmit">
         Login
       </button>
     </form>
+    <!-- If user don't have an accont than give the register link -->
     <p>Don't have an accont?<a href="register.html">Register Here!</a> </p>
+    
+    <!-- linking the app.js -->
     <script src="./scripts/app.js"></script>
     
   </body>
