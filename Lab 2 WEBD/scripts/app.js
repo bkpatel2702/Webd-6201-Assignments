@@ -1,6 +1,7 @@
 // Full name: Bhargav Patel
 // Student ID:100841562
 // Date completed: 05-02-2023
+// Reference: - Took help from the provided videos on feb 10 and feb 9 and took help from some code of ICE 4
 
 // Setting the time function that will help page to stay on the same for 3 second 
 function timeRedirect(e){
